@@ -1,2 +1,0 @@
-# BasicAppX
- Aplas Polinema
