@@ -13,19 +13,20 @@ import org.robolectric.annotation.Config;
 @Config(manifest=Config.NONE)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
-public class TestB1BasicActivityX091 extends ViewTest {
+public class TestA1BasicUIX081 extends ViewTest {
     private MainActivity activity;
+    private String packName;
     ResourceTest rsc;
 
     @Before
     public void initTest() {
         activity = Robolectric.buildActivity(MainActivity.class).create().get();
-        //packName = activity.getPackageName();
+        packName = activity.getPackageName();
         rsc = new ResourceTest(activity.getResources());
     }
 
     @Test
     public void check_01_Image_Resources() {
-        rsc.testImgResource("formula");
+        rsc.testImgResource("temperature");
     }
 }
